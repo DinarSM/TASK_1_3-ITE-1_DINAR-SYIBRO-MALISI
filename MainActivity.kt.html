@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>MainActivity.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.tugas1</span>
+
+<span class="s1">import androidx.appcompat.app.AppCompatActivity</span>
+<span class="s1">import android.os.Bundle</span>
+<span class="s1">import android.widget.Button</span>
+<span class="s1">import android.widget.EditText</span>
+<span class="s1">import android.widget.Toast</span>
+
+<span class="s0">class </span><span class="s1">MainActivity : AppCompatActivity() {</span>
+
+    <span class="s1">private lateinit </span><span class="s0">var </span><span class="s1">btn_happy: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">btn_sad: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">btn_mad: Button</span>
+    <span class="s1">lateinit </span><span class="s0">var </span><span class="s1">etName: EditText</span>
+
+    <span class="s1">override </span><span class="s0">fun </span><span class="s1">onCreate(savedInstanceState: Bundle?) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span>
+        <span class="s1">setContentView(R.layout.activity_main)</span>
+
+        <span class="s1">btn_happy = findViewById(R.id.btn_Happy)</span>
+        <span class="s1">etName = findViewById(R.id.et_name)</span>
+        <span class="s1">btn_mad = findViewById(R.id.btn_Mad)</span>
+        <span class="s1">btn_sad = findViewById(R.id.btn_Sad)</span>
+
+        <span class="s1">btn_happy.setOnClickListener {</span>
+            <span class="s0">if </span><span class="s1">(etName.text.isEmpty()) {</span>
+                <span class="s1">Toast.makeText(</span>
+                    <span class="s1">applicationContext</span><span class="s0">,</span>
+                    <span class="s2">&quot;Harap isi nama terlebih dahulu&quot;</span><span class="s0">,</span>
+                    <span class="s1">Toast.LENGTH_SHORT</span>
+                <span class="s1">).show()</span>
+                <span class="s0">return</span><span class="s1">@setOnClickListener</span>
+            <span class="s1">}</span>
+            <span class="s1">Toast.makeText(</span>
+                <span class="s0">this,</span>
+                <span class="s2">&quot;Hi, &quot; </span><span class="s1">+ etName.text + </span><span class="s2">&quot;.&quot; </span><span class="s1">+ </span><span class="s2">&quot; you are happy today! :D&quot;</span><span class="s0">,</span>
+                <span class="s1">Toast.LENGTH_SHORT</span>
+            <span class="s1">).show()</span>
+        <span class="s1">}</span>
+        <span class="s1">btn_mad.setOnClickListener {</span>
+            <span class="s0">if </span><span class="s1">(etName.text.isEmpty()) {</span>
+                <span class="s1">Toast.makeText(</span>
+                    <span class="s1">applicationContext</span><span class="s0">,</span>
+                    <span class="s2">&quot;Harap isi nama terlebih dahulu&quot;</span><span class="s0">,</span>
+                    <span class="s1">Toast.LENGTH_SHORT</span>
+                <span class="s1">).show()</span>
+                <span class="s0">return</span><span class="s1">@setOnClickListener</span>
+            <span class="s1">}</span>
+            <span class="s1">Toast.makeText(</span><span class="s0">this, </span><span class="s2">&quot;Hi, &quot; </span><span class="s1">+ etName.text + </span><span class="s2">&quot;.&quot; </span><span class="s1">+ </span><span class="s2">&quot; you are mad today! :C&quot;</span><span class="s0">, </span><span class="s1">Toast.LENGTH_SHORT)</span>
+                <span class="s1">.show()</span>
+        <span class="s1">}</span>
+        <span class="s1">btn_sad.setOnClickListener {</span>
+            <span class="s0">if </span><span class="s1">(etName.text.isEmpty()) {</span>
+                <span class="s1">Toast.makeText(</span>
+                    <span class="s1">applicationContext</span><span class="s0">,</span>
+                    <span class="s2">&quot;Harap isi nama terlebih dahulu&quot;</span><span class="s0">,</span>
+                    <span class="s1">Toast.LENGTH_SHORT</span>
+                <span class="s1">).show()</span>
+                <span class="s0">return</span><span class="s1">@setOnClickListener</span>
+            <span class="s1">}</span>
+            <span class="s1">Toast.makeText(</span><span class="s0">this, </span><span class="s2">&quot;Hi, &quot; </span><span class="s1">+ etName.text + </span><span class="s2">&quot;.&quot; </span><span class="s1">+ </span><span class="s2">&quot; you are sad today! :(&quot;</span><span class="s0">, </span><span class="s1">Toast.LENGTH_SHORT)</span>
+                <span class="s1">.show()</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
